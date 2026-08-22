@@ -27,6 +27,7 @@ import BufferedInputHOC from '../forms/buffered-input-hoc.jsx';
 import Input from '../forms/input.jsx';
 import {makeAlphaComponent} from '../../lib/tw-color-utils';
 import TWColorReadout from '../tw-color-readout/tw-color-readout.jsx';
+import RecentColorsContainer from '../../containers/nb-recent-colors.jsx';
 
 const BufferedInput = BufferedInputHOC(Input);
 
@@ -334,6 +335,18 @@ class ColorPickerComponent extends React.Component {
                             onChange={this.props.onAlphaChange}
                         />
                     </div>
+                </div>
+                <div className={styles.row}>
+                    <div className={styles.rowHeader}>
+                        <span className={styles.labelName}>
+                            <FormattedMessage
+                                defaultMessage="Recent Colors"
+                                description="Label for the recent colors component in the color picker"
+                                id="nw.paint.recentColors"
+                            />
+                        </span>
+                    </div>
+                    <RecentColorsContainer onUpdateImage={console.log} />
                 </div>
                 <div className={styles.pickerRow}>
                     <Input
