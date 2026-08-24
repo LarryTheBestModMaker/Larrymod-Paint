@@ -17,7 +17,6 @@ class FontDropdown extends React.Component {
             'getFontName',
             'handleHoverCustom',
             'handleManageFonts',
-            'handleChangeFontSerif',
             'handleChangeFontSansSerif',
             'handleChangeFontHandwriting',
             'handleChangeFontMarker',
@@ -25,11 +24,9 @@ class FontDropdown extends React.Component {
             'handleChangeFontPixel',
             'handleChangeFontMopeds',
             'handleChangeFontPlayful',
-            'handleChangeFontBubbly',
             'handleChangeFontTechnological',
             'handleChangeFontBitsAndBytes',
             'handleChangeFontArcade',
-            'handleChangeFontScratch',
             'handleChangeFontFredoka',
             'handleChangeFontArchivo',
             'handleChangeFontArchivoBlack',
@@ -59,8 +56,6 @@ class FontDropdown extends React.Component {
                 return '한국어';
             case Fonts.JAPANESE:
                 return '日本語';
-            case Fonts.SCRATCH:
-                return 'Branches';
             default:
                 return font;
             }
@@ -204,11 +199,6 @@ class FontDropdown extends React.Component {
             this.props.changeFont(Fonts.SANS_SERIF);
         }
     }
-    handleChangeFontSerif () {
-        if (this.dropDown.isOpen()) {
-            this.props.changeFont(Fonts.SERIF);
-        }
-    }
     handleChangeFontHandwriting () {
         if (this.dropDown.isOpen()) {
             this.props.changeFont(Fonts.HANDWRITING);
@@ -244,11 +234,6 @@ class FontDropdown extends React.Component {
             this.props.changeFont(Fonts.BITSANDBYTES);
         }
     }
-    handleChangeFontBubbly() {
-        if (this.dropDown.isOpen()) {
-            this.props.changeFont(Fonts.BUBBLY);
-        }
-    }
     handleChangeFontTechnological() {
         if (this.dropDown.isOpen()) {
             this.props.changeFont(Fonts.TECHNOLOGICAL);
@@ -272,11 +257,6 @@ class FontDropdown extends React.Component {
     handleChangeFontImpact() {
         if (this.dropDown.isOpen()) {
             this.props.changeFont(Fonts.IMPACT);
-        }
-    }
-    handleChangeFontScratch() {
-        if (this.dropDown.isOpen()) {
-            this.props.changeFont(Fonts.SCRATCH);
         }
     }
     handleChangeFontFredoka() {
@@ -398,17 +378,14 @@ class FontDropdown extends React.Component {
                 onHoverPixel={this.handleChangeFontPixel}
                 onHoverMopeds={this.handleChangeFontMopeds}
                 onHoverPlayful={this.handleChangeFontPlayful}
-                onHoverBubbly={this.handleChangeFontBubbly}
                 onHoverBitsAndBytes={this.handleChangeFontBitsAndBytes}
                 onHoverTechnological={this.handleChangeFontTechnological}
                 onHoverArcade={this.handleChangeFontArcade}
                 onHoverArchivo={this.handleChangeFontArchivo}
                 onHoverArchivoBlack={this.handleChangeFontArchivoBlack}
-                onHoverScratch={this.handleChangeFontScratch}
                 onHoverFredoka={this.handleChangeFontFredoka}
                 onHoverImpact={this.handleChangeFontImpact}
                 onHoverSansSerif={this.handleChangeFontSansSerif}
-                onHoverSerif={this.handleChangeFontSerif}
                 onOpenDropdown={this.handleOpenDropdown}
                 customExists={this.latestCustomFont !== null}
                 customClass={this.latestCustomFont ? this.latestCustomFont.class : null}

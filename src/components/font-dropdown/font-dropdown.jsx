@@ -43,16 +43,6 @@ const ModeToolsComponent = props => (
                 <Button
                     className={classNames(styles.modMenuItem)}
                     onClick={props.onChoose}
-                    onMouseOver={props.onHoverSerif}
-                >
-                    <DisplayFont
-                        font={Fonts.SERIF}
-                        getFontName={props.getFontName}
-                    />
-                </Button>
-                <Button
-                    className={classNames(styles.modMenuItem)}
-                    onClick={props.onChoose}
                     onMouseOver={props.onHoverHandwriting}
                 >
                     <DisplayFont
@@ -113,16 +103,6 @@ const ModeToolsComponent = props => (
                 <Button
                     className={classNames(styles.modMenuItem)}
                     onClick={props.onChoose}
-                    onMouseOver={props.onHoverBubbly}
-                >
-                    <DisplayFont
-                        font={Fonts.BUBBLY}
-                        getFontName={props.getFontName}
-                    />
-                </Button>
-                <Button
-                    className={classNames(styles.modMenuItem)}
-                    onClick={props.onChoose}
                     onMouseOver={props.onHoverArcade}
                 >
                     <DisplayFont
@@ -147,16 +127,6 @@ const ModeToolsComponent = props => (
                 >
                     <DisplayFont
                         font={Fonts.TECHNOLOGICAL}
-                        getFontName={props.getFontName}
-                    />
-                </Button>
-                <Button
-                    className={classNames(styles.modMenuItem)}
-                    onClick={props.onChoose}
-                    onMouseOver={props.onHoverScratch}
-                >
-                    <DisplayFont
-                        font={Fonts.SCRATCH}
                         getFontName={props.getFontName}
                     />
                 </Button>
@@ -301,18 +271,15 @@ ModeToolsComponent.propTypes = {
     onHoverPixel: PropTypes.func,
     onHoverMopeds: PropTypes.func,
     onHoverPlayful: PropTypes.func,
-    onHoverBubbly: PropTypes.func,
     onHoverBitsAndBytes: PropTypes.func,
     onHoverTechnological: PropTypes.func,
     onHoverArcade: PropTypes.func,
-    onHoverScratch: PropTypes.func,
     onHoverFredoka: PropTypes.func,
     onHoverImpact: PropTypes.func,
     onHoverCourierNew: PropTypes.func,
     onHoverArchivo: PropTypes.func,
     onHoverArchivoBlack: PropTypes.func,
     onHoverSansSerif: PropTypes.func,
-    onHoverSerif: PropTypes.func,
     onOpenDropdown: PropTypes.func
 };
 export default ModeToolsComponent;
