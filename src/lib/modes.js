@@ -12,6 +12,7 @@ const vectorModesObj = {
     RECT: null,
     ROUNDED_RECT: null,
     TEXT: null,
+    ICON: null,
     
     SUSSY: null,
     TRIANGLE: null,
@@ -26,6 +27,7 @@ const bitmapModesObj = {
     BIT_OVAL: null,
     BIT_RECT: null,
     BIT_TEXT: null,
+    BIT_ICON: null,
     BIT_FILL: null,
     BIT_ERASER: null,
     BIT_SELECT: null
@@ -49,6 +51,7 @@ const GradientToolsModes = keyMirror({
     BIT_FILL: null,
 
     TEXT: null,
+    ICON: null,
 
     SUSSY: null,
     TRIANGLE: null,
