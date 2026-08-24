@@ -30,7 +30,7 @@
 }
 
 .search-input:focus {
-    border-color: $looks-secondary;
+    border-color: $form-border;
 }
 
 .icon-scroll-area {
@@ -81,7 +81,7 @@
 }
 
 .icon-tile.is-selected {
-    background-color: $looks-secondary;
+    background-color: $form-border;
 }
 
 .icon-glyph {
