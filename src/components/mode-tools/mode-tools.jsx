@@ -711,7 +711,7 @@ const ModeToolsComponent = props => {
                                     />
                                     <LabeledIconButton
                                         hideLabel={hideLabel(props.intl.locale)}
-                                        imgSrc={shapesubtractIcon}
+                                        imgSrc={shapeSubtractIcon}
                                         title={'Subtract'}
                                         onClick={props.onSubtractShape}
                                     />
