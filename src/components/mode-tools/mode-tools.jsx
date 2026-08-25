@@ -187,7 +187,12 @@ const ModeToolsComponent = props => {
             defaultMessage: 'Rounded',
             description: 'A Label.',
             id: 'paint.modeTools.rounded'
-        }
+        },
+        masktools: {
+            defaultMessage: 'Booleans',
+            description: 'Label for dropdown to access the masking tools',
+            id: 'paint.modeTools.masktools'
+        },
     });
 
     useEffect(() => {
@@ -684,31 +689,44 @@ const ModeToolsComponent = props => {
                 </InputGroup>
             );
             const reshapingMethods = (
-                <InputGroup className={classNames(styles.modDashedBorder, styles.modLabeledIconHeight)}>
-                    <LabeledIconButton
-                        hideLabel={hideLabel(props.intl.locale)}
-                        imgSrc={shapeMergeIcon}
-                        title={'Merge'}
-                        onClick={props.onMergeShape}
-                    />
-                    <LabeledIconButton
-                        hideLabel={hideLabel(props.intl.locale)}
-                        imgSrc={shapeMaskIcon}
-                        title={'Mask'}
-                        onClick={props.onMaskShape}
-                    />
-                    <LabeledIconButton
-                        hideLabel={hideLabel(props.intl.locale)}
-                        imgSrc={shapeSubtractIcon}
-                        title={'Subtract'}
-                        onClick={props.onSubtractShape}
-                    />
-                    <LabeledIconButton
-                        hideLabel={hideLabel(props.intl.locale)}
-                        imgSrc={shapeFilterIcon}
-                        title={'Filter'}
-                        onClick={props.onExcludeShape}
-                    />
+                <InputGroup>
+                        <Dropdown
+                            className={styles.modUnselect}
+                            enterExitTransitionDurationMs={20}
+                            popoverContent={
+                                <InputGroup
+                                    className={styles.modContextMenu}
+                                >
+                                    <LabeledIconButton
+                                        hideLabel={hideLabel(props.intl.locale)}
+                                        imgSrc={shapeMaskIcon}
+                                        title={'Mask'}
+                                        onClick={props.onMaskShape}
+                                    />
+                                    <LabeledIconButton
+                                        hideLabel={hideLabel(props.intl.locale)}
+                                        imgSrc={shapeFilterIcon}
+                                        title={'Filter'}
+                                        onClick={props.onExcludeShape}
+                                    />
+                                    <LabeledIconButton
+                                        hideLabel={hideLabel(props.intl.locale)}
+                                        imgSrc={shapesubtractIcon}
+                                        title={'Subtract'}
+                                        onClick={props.onSubtractShape}
+                                    />
+                                    <LabeledIconButton
+                                        hideLabel={hideLabel(props.intl.locale)}
+                                        imgSrc={shapeMergeIcon}
+                                        title={'Merge'}
+                                        onClick={props.onMergeShape}
+                                    />
+                                </InputGroup>
+                            }
+                            tipSize={.01}
+                        >
+                            {props.intl.formatMessage(messages.masktools)}
+                        </Dropdown>
                 </InputGroup>
             );
             const flipOptions = (
